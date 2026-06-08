@@ -1,0 +1,28 @@
+# Sonatype Guide — Agentic Patches (AGP) Configuration
+
+version: "1"
+
+ignore:
+  paths:
+    - "**/node_modules/**"
+  packages: []
+
+validation:
+  enabled: true
+  commands:
+    - npm ci
+    - npm test
+  timeout: 5m
+
+pr:
+  labels:
+    - dependencies
+    - automated
+  draft: false
+
+limits:
+  maxOpenPRs: 5
+  maxPRsPerRun: 10
+
+grouping:
+  strategy: individual

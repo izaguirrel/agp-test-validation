@@ -1,0 +1,15 @@
+{
+  "name": "agp-test-validation",
+  "version": "1.0.0",
+  "description": "Minimal test repo for AGP validation failure testing",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "dependencies": {
+    "lodash": "4.17.20"
+  },
+  "devDependencies": {
+    "jest": "29.5.0"
+  }
+}
