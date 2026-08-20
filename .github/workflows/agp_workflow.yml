@@ -41,7 +41,7 @@ jobs:
           create-pr: 'true'
           dry-run: 'false'
           verbose: ${{ inputs.verbose || 'false' }}
-          docker-image: sonatype.repo.sonatype.app/docker-all/sonatype/agp:latest
+          docker-image: sonatype.repo.sonatype.app/docker-all/sonatype/agp:main-2676-df50a36e
           docker-username: ${{ secrets.DOCKER_USERNAME }}
           docker-password: ${{ secrets.DOCKER_PASSWORD }}
           github-token: ${{ secrets.AGP_GITHUB_TOKEN }}
