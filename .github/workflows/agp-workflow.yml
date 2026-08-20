@@ -105,5 +105,9 @@ jobs:
           repo_id: ${{ inputs.repo_id || '' }}
           vulnerabilities: ${{ inputs.vulnerabilities }}
           verbose: ${{ inputs.verbose || 'false' }}
+          # GUIDE-3208: Pin to merged image for testing
+          docker-image: sonatype.repo.sonatype.app/docker-all/sonatype/agp:main-2676-df50a36e
+          docker-username: ${{ secrets.DOCKER_USERNAME }}
+          docker-password: ${{ secrets.DOCKER_PASSWORD }}
         env:
           AGP_API_URL: ${{ vars.AGP_API_URL }}
